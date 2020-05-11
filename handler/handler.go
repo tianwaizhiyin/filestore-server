@@ -9,7 +9,7 @@ import (
 func UploadHandler(w http.ResponseWriter, r *http.Request)  {
 	if r.Method == "GET" {
 		//返回上传html页面
-		data, er := ioutil.ReadFile("D:/golang/gopath/src/filestore-server/static/view/index.html")
+		data, err := ioutil.ReadFile("D:/golang/gopath/src/filestore-server/static/view/index.html")
 		if err != nil {
 			io.WriteString(w, "internel server error")
 			return
